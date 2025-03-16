@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-16T18:10:46.901770" rpa="false" schemaversion="5">
+<suite id="s1" name="Mobile Todo" source="D:\OneDrive\Cursos\robotframework\mobile_todo">
+<suite id="s1-s1" name="Tests" source="D:\OneDrive\Cursos\robotframework\mobile_todo\tests">
+<suite id="s1-s1-s1" name="Tests" source="D:\OneDrive\Cursos\robotframework\mobile_todo\tests\tests.robot">
+<kw name="Open App" owner="openApp" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=D:\\OneDrive\\Cursos\\robotframework\\mobile_todo\\resources\\utils${/}..${/}app${/}todo-2-3-4.apk</arg>
+<arg>disableIdLocatorAutocompletion=${True}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-03-16T18:10:48.253551" elapsed="26.857834"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:10:48.251404" elapsed="26.860844"/>
+</kw>
+<test id="s1-s1-s1-t1" name="TC001: Acessar aplicativo pela primeira vez" line="7">
+<kw name="Dado que eu estou na tela inicial" owner="custom" source_name="Dado ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:19.205662" level="INFO">criteria is com.nweave.todo:id/selected_folder_name
+criteria is com.nweave.todo:id/selected_folder_name
+criteria is com.nweave.todo:id/selected_folder_name
+criteria is com.nweave.todo:id/selected_folder_name
+criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:15.119573" elapsed="4.086323"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:19.208576" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:19.316557" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.206172" elapsed="0.110595"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:15.119059" elapsed="4.197883"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:15.118117" elapsed="4.198912"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:15.117287" elapsed="4.199854"/>
+</kw>
+<kw name="Então o App deve exibir a lista de tarefas vazia" owner="custom" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o App deve exibir a lista de tarefas vazia" owner="tasksPage">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:19.401211" level="INFO">Current page contains element 'id = com.nweave.todo:id/task_list_empty'.</msg>
+<msg time="2025-03-16T18:11:19.401336" level="INFO">criteria is com.nweave.todo:id/task_list_empty</msg>
+<arg>${TASK_LIST_EMPTY}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.319492" elapsed="0.081999"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.319150" elapsed="0.082512"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.318720" elapsed="0.083028"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.318140" elapsed="0.083764"/>
+</kw>
+<kw name="E o botão de adicionar tarefa deve estar visível" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o botão de adicionar tarefa deve estar visível" owner="tasksPage">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:19.525974" level="INFO">criteria is com.nweave.todo:id/task_list_add_task_fab_button</msg>
+<arg>${ADD_TASK}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.404209" elapsed="0.121905"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.403658" elapsed="0.122616"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.402978" elapsed="0.123413"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.402428" elapsed="0.124084"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:15.112427" elapsed="4.415103"/>
+</test>
+<test id="s1-s1-s1-t2" name="TC002: Adicionar tarefa" line="12">
+<kw name="Dado que eu estou na tela inicial" owner="custom" source_name="Dado ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:19.640161" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.531931" elapsed="0.108369"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:19.644465" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:19.743231" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.640578" elapsed="0.102789"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.531481" elapsed="0.212086"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.530724" elapsed="0.212928"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.529777" elapsed="0.213988"/>
+</kw>
+<kw name="Quando eu clico no botão Adicionar Tarefa" owner="custom" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="eu clico no botão Adicionar Tarefa" owner="tasksPage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:19.750781" level="INFO">Clicking element 'id = com.nweave.todo:id/task_list_add_task_fab_button'.</msg>
+<msg time="2025-03-16T18:11:19.965835" level="INFO">criteria is com.nweave.todo:id/task_list_add_task_fab_button</msg>
+<arg>${ADD_TASK}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.746605" elapsed="0.219391"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.745996" elapsed="0.220162"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.745443" elapsed="0.220798"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.744869" elapsed="0.221528"/>
+</kw>
+<kw name="E preencho o título com &quot;criar testes com robot&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="preencho o título com &quot;criar testes com robot&quot;" owner="tasksPage" source_name="preencho o título com &quot;${titulo}&quot;">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:22.537033" level="INFO">criteria is com.nweave.todo:id/add_task_name_edit_text
+criteria is com.nweave.todo:id/add_task_name_edit_text</msg>
+<arg>${TASK_NAME_EDIT}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.975226" elapsed="2.561944"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:22.541232" level="INFO">Typing text 'criar testes com robot' into text field 'id = com.nweave.todo:id/add_task_name_edit_text'</msg>
+<msg time="2025-03-16T18:11:25.683361" level="INFO">criteria is com.nweave.todo:id/add_task_name_edit_text</msg>
+<arg>${TASK_NAME_EDIT}</arg>
+<arg>${titulo}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:22.537516" elapsed="3.145999"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.974367" elapsed="5.709316"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:19.973836" elapsed="5.709933"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.973199" elapsed="5.710678"/>
+</kw>
+<kw name="E clico em Salvar" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clico em Salvar" owner="tasksPage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:25.692746" level="INFO">Clicking element 'id = com.nweave.todo:id/add_task_done_button'.</msg>
+<msg time="2025-03-16T18:11:27.162464" level="INFO">criteria is com.nweave.todo:id/add_task_done_button</msg>
+<arg>${TASK_DONE_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:25.689290" elapsed="1.473294"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:25.688692" elapsed="1.474165"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:25.688044" elapsed="1.474951"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:25.687356" elapsed="1.475749"/>
+</kw>
+<kw name="Então o App deve exibir a lista de tarefas" owner="custom" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o App deve exibir a lista de tarefas" owner="tasksPage">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:30.588662" level="INFO">criteria is com.nweave.todo:id/selected_folder_name
+criteria is com.nweave.todo:id/selected_folder_name
+criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:27.166463" elapsed="3.422334"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:30.593463" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:30.712275" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:30.589070" elapsed="0.123416"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:27.165963" elapsed="3.546683"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:27.165300" elapsed="3.547441"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:27.164670" elapsed="3.548153"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:27.163954" elapsed="3.548977"/>
+</kw>
+<kw name="E deve exibir a tarefa &quot;criar testes com robot&quot; na lista &quot;Today Tasks&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="deve exibir a tarefa &quot;criar testes com robot&quot; na lista &quot;Today Tasks&quot;" owner="tasksPage" source_name="deve exibir a tarefa &quot;${titulo}&quot; na lista &quot;${lista}&quot;">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:30.873276" level="INFO">criteria is com.nweave.todo:id/header_title</msg>
+<arg>${TODAYS_TASKS_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:30.716847" elapsed="0.156596"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:30.877488" level="INFO">Verifying element 'id = com.nweave.todo:id/header_title' contains exactly text 'Today Tasks'.</msg>
+<msg time="2025-03-16T18:11:30.997278" level="INFO">criteria is com.nweave.todo:id/header_title</msg>
+<arg>${TODAYS_TASKS_TITLE}</arg>
+<arg>${lista}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:30.873720" elapsed="0.123694"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:31.105042" level="INFO">criteria is com.nweave.todo:id/textView_task_title2</msg>
+<arg>${TASK_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:30.997873" elapsed="0.107299"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:31.109619" level="INFO">Verifying element 'id = com.nweave.todo:id/textView_task_title2' contains exactly text 'criar testes com robot'.</msg>
+<msg time="2025-03-16T18:11:31.225384" level="INFO">criteria is com.nweave.todo:id/textView_task_title2</msg>
+<arg>${TASK_TITLE}</arg>
+<arg>${titulo}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:31.105491" elapsed="0.120082"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:30.716420" elapsed="0.509328"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:30.715837" elapsed="0.510002"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:30.715189" elapsed="0.510767"/>
+</kw>
+<kw name="E deve exibir o ícone de lembrete na tarefa &quot;criar testes com robot&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="deve exibir o ícone de lembrete na tarefa &quot;criar testes com robot&quot;" owner="tasksPage" source_name="deve exibir o ícone de lembrete na tarefa &quot;${titulo}&quot;">
+<kw name="Element Should Be Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:31.402158" level="INFO">criteria is com.nweave.todo:id/image_task_alarm2</msg>
+<arg>${TASK_ALARM}</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:31.228491" elapsed="0.173785"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:31.227948" elapsed="0.174468"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:31.227296" elapsed="0.175234"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:31.226586" elapsed="0.176071"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:19.528836" elapsed="11.884245"/>
+</test>
+<test id="s1-s1-s1-t3" name="TC003: Exibir detalhes da tarefa e sair" line="21">
+<kw name="Dado que eu estou na tela inicial" owner="custom" source_name="Dado ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:31.673271" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:31.469557" elapsed="0.203875"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:31.678087" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:31.785333" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:31.673948" elapsed="0.111525"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:31.469056" elapsed="0.316581"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:31.468509" elapsed="0.317207"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:31.467883" elapsed="0.318010"/>
+</kw>
+<kw name="Quando eu clico na tarefa &quot;criar testes com robot&quot;" owner="custom" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="eu clico na tarefa &quot;criar testes com robot&quot;" owner="tasksPage" source_name="eu clico na tarefa &quot;${titulo}&quot;">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:31.793451" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="criar testes com robot"]'.</msg>
+<msg time="2025-03-16T18:11:33.807765" level="INFO">xpath criteria: //android.widget.TextView[@text="criar testes com robot"]</msg>
+<arg>xpath=//android.widget.TextView[@text="${titulo}"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:31.789731" elapsed="2.018579"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:31.787881" elapsed="2.020599"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:31.787170" elapsed="2.021400"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:31.786419" elapsed="2.022278"/>
+</kw>
+<kw name="Então o App deve exibir os detalhes da tarefa" owner="custom" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o App deve exibir os detalhes da tarefa" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:34.692838" level="INFO">criteria is com.nweave.todo:id/add_task_screen_title</msg>
+<arg>${ADD_TASK_SCREEN_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:33.812341" elapsed="0.880624"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:34.698046" level="INFO">Verifying element 'id = com.nweave.todo:id/add_task_screen_title' contains exactly text 'Details'.</msg>
+<msg time="2025-03-16T18:11:35.383172" level="INFO">criteria is com.nweave.todo:id/add_task_screen_title</msg>
+<arg>${ADD_TASK_SCREEN_TITLE}</arg>
+<arg>Details</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:34.693295" elapsed="0.690002"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:33.811586" elapsed="1.571861"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:33.811006" elapsed="1.572562"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:33.810362" elapsed="1.573373"/>
+</kw>
+<kw name="E o título da tarefa deve ser &quot;criar testes com robot&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o título da tarefa deve ser &quot;criar testes com robot&quot;" owner="tasksPage" source_name="o título da tarefa deve ser &quot;${titulo}&quot;">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:35.390368" level="INFO">Verifying element 'id = com.nweave.todo:id/add_task_name_edit_text' contains exactly text 'criar testes com robot'.</msg>
+<msg time="2025-03-16T18:11:35.905469" level="INFO">criteria is com.nweave.todo:id/add_task_name_edit_text</msg>
+<arg>${TASK_NAME_EDIT}</arg>
+<arg>${titulo}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:35.386214" elapsed="0.519375"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:35.385719" elapsed="0.520024"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:35.385092" elapsed="0.520736"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:35.384454" elapsed="0.521477"/>
+</kw>
+<kw name="E a data da tarefa deve ser hoje" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="a data da tarefa deve ser hoje" owner="tasksPage">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-03-16T18:11:35.911080" level="INFO">${data_hoje} = 16/03/2025</msg>
+<var>${data_hoje}</var>
+<arg>result_format=%d/%m/%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-03-16T18:11:35.909855" elapsed="0.001304"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:35.916034" level="INFO">Verifying element 'id = com.nweave.todo:id/add_task_due_date_value' contains exactly text '16/03/2025'.</msg>
+<msg time="2025-03-16T18:11:36.372972" level="INFO">criteria is com.nweave.todo:id/add_task_due_date_value</msg>
+<arg>${TASK_DATE}</arg>
+<arg>${data_hoje}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:35.911647" elapsed="0.461449"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:35.909214" elapsed="0.464075"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:35.908532" elapsed="0.464855"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:35.907897" elapsed="0.465707"/>
+</kw>
+<kw name="E o lembrete deve ser &quot;On Due&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o lembrete deve ser &quot;On Due&quot;" owner="tasksPage" source_name="o lembrete deve ser &quot;${lembrete}&quot;">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:36.381258" level="INFO">Verifying element 'id = com.nweave.todo:id/reminder_state_textview' contains exactly text 'On Due'.</msg>
+<msg time="2025-03-16T18:11:37.228812" level="INFO">criteria is com.nweave.todo:id/reminder_state_textview</msg>
+<arg>${TASK_REMINDER}</arg>
+<arg>${lembrete}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:36.377092" elapsed="0.851841"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:36.376528" elapsed="0.852561"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:36.375842" elapsed="0.853340"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:36.375148" elapsed="0.854157"/>
+</kw>
+<kw name="E a repetição deve ser &quot;No Repeat&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="a repetição deve ser &quot;No Repeat&quot;" owner="tasksPage" source_name="a repetição deve ser &quot;${repeticao}&quot;">
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:37.234053" level="INFO">Verifying element 'id = com.nweave.todo:id/repeated_state_textview' contains exactly text 'No Repeat'.</msg>
+<msg time="2025-03-16T18:11:37.344733" level="INFO">criteria is com.nweave.todo:id/repeated_state_textview</msg>
+<arg>${TASK_REPEAT}</arg>
+<arg>${repeticao}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:37.231253" elapsed="0.113741"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:37.230950" elapsed="0.114198"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:37.230430" elapsed="0.114795"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:37.230006" elapsed="0.115319"/>
+</kw>
+<kw name="E clico em Salvar" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clico em Salvar" owner="tasksPage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:37.351750" level="INFO">Clicking element 'id = com.nweave.todo:id/add_task_done_button'.</msg>
+<msg time="2025-03-16T18:11:37.560224" level="INFO">criteria is com.nweave.todo:id/add_task_done_button</msg>
+<arg>${TASK_DONE_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:37.347993" elapsed="0.212627"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:37.347469" elapsed="0.213299"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:37.346882" elapsed="0.214104"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:37.346208" elapsed="0.214923"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:31.466948" elapsed="6.094827"/>
+</test>
+<test id="s1-s1-s1-t4" name="TC004: Remover data da tarefa" line="31">
+<kw name="Dado que eu estou na tela inicial" owner="custom" source_name="Dado ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:39.396727" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:37.568648" elapsed="1.828227"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:39.400465" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:39.827662" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:39.397168" elapsed="0.430631"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:37.568228" elapsed="2.259763"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:37.567687" elapsed="2.260416"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:37.567152" elapsed="2.261072"/>
+</kw>
+<kw name="Quando eu clico na tarefa &quot;criar testes com robot&quot;" owner="custom" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="eu clico na tarefa &quot;criar testes com robot&quot;" owner="tasksPage" source_name="eu clico na tarefa &quot;${titulo}&quot;">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:39.835258" level="INFO">Clicking element 'xpath=//android.widget.TextView[@text="criar testes com robot"]'.</msg>
+<msg time="2025-03-16T18:11:40.126095" level="INFO">xpath criteria: //android.widget.TextView[@text="criar testes com robot"]</msg>
+<arg>xpath=//android.widget.TextView[@text="${titulo}"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:39.831093" elapsed="0.295262"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:39.830527" elapsed="0.296004"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:39.829687" elapsed="0.296932"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:39.828770" elapsed="0.297978"/>
+</kw>
+<kw name="E clico no botão de excluir data" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clico no botão de excluir data" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:41.839840" level="INFO">criteria is com.nweave.todo:id/add_task_remove_duedate
+criteria is com.nweave.todo:id/add_task_remove_duedate</msg>
+<arg>${REMOVE_DUE_DATE_BTN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:40.129085" elapsed="1.710927"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:41.844422" level="INFO">Clicking element 'id = com.nweave.todo:id/add_task_remove_duedate'.</msg>
+<msg time="2025-03-16T18:11:43.200480" level="INFO">criteria is com.nweave.todo:id/add_task_remove_duedate</msg>
+<arg>${REMOVE_DUE_DATE_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:41.840295" elapsed="1.360311"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:40.128556" elapsed="3.072233"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:40.127891" elapsed="3.072985"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:40.127292" elapsed="3.073687"/>
+</kw>
+<kw name="E clico em Salvar" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clico em Salvar" owner="tasksPage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:43.208868" level="INFO">Clicking element 'id = com.nweave.todo:id/add_task_done_button'.</msg>
+<msg time="2025-03-16T18:11:44.407351" level="INFO">criteria is com.nweave.todo:id/add_task_done_button</msg>
+<arg>${TASK_DONE_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:43.204139" elapsed="1.203337"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:43.203603" elapsed="1.204038"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:43.203037" elapsed="1.204699"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:43.202275" elapsed="1.205571"/>
+</kw>
+<kw name="Então o App deve exibir a lista de tarefas" owner="custom" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o App deve exibir a lista de tarefas" owner="tasksPage">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:46.461220" level="INFO">criteria is com.nweave.todo:id/selected_folder_name
+criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:44.410805" elapsed="2.050532"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:46.465926" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:46.581257" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:46.461622" elapsed="0.119763"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:44.410309" elapsed="2.171270"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:44.409795" elapsed="2.171886"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:44.409205" elapsed="2.172560"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:44.408593" elapsed="2.173506"/>
+</kw>
+<kw name="E deve exibir a tarefa &quot;criar testes com robot&quot; na lista &quot;No Date Tasks&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="deve exibir a tarefa &quot;criar testes com robot&quot; na lista &quot;No Date Tasks&quot;" owner="tasksPage" source_name="deve exibir a tarefa &quot;${titulo}&quot; na lista &quot;${lista}&quot;">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:46.680271" level="INFO">criteria is com.nweave.todo:id/header_title</msg>
+<arg>${TODAYS_TASKS_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:46.583917" elapsed="0.096530"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:46.683543" level="INFO">Verifying element 'id = com.nweave.todo:id/header_title' contains exactly text 'No Date Tasks'.</msg>
+<msg time="2025-03-16T18:11:46.797905" level="INFO">criteria is com.nweave.todo:id/header_title</msg>
+<arg>${TODAYS_TASKS_TITLE}</arg>
+<arg>${lista}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:46.680769" elapsed="0.117266"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:46.880817" level="INFO">criteria is com.nweave.todo:id/textView_task_title2</msg>
+<arg>${TASK_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:46.798286" elapsed="0.082677"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:46.883520" level="INFO">Verifying element 'id = com.nweave.todo:id/textView_task_title2' contains exactly text 'criar testes com robot'.</msg>
+<msg time="2025-03-16T18:11:46.981603" level="INFO">criteria is com.nweave.todo:id/textView_task_title2</msg>
+<arg>${TASK_TITLE}</arg>
+<arg>${titulo}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:46.881244" elapsed="0.100509"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:46.583656" elapsed="0.398245"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:46.583263" elapsed="0.398753"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:46.582756" elapsed="0.399390"/>
+</kw>
+<kw name="E não deve exibir o ícone de lembrete na tarefa &quot;criar testes com robot&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="não deve exibir o ícone de lembrete na tarefa &quot;criar testes com robot&quot;" owner="tasksPage" source_name="não deve exibir o ícone de lembrete na tarefa &quot;${titulo}&quot;">
+<kw name="Page Should Not Contain Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:47.046509" level="INFO">Current page not contains element 'id = com.nweave.todo:id/image_task_alarm2'.</msg>
+<msg time="2025-03-16T18:11:47.046642" level="INFO">criteria is com.nweave.todo:id/image_task_alarm2</msg>
+<arg>${TASK_ALARM}</arg>
+<doc>Verifies that current page not contains `locator` element.</doc>
+<status status="PASS" start="2025-03-16T18:11:46.984785" elapsed="0.061939"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:46.984434" elapsed="0.062445"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:46.983930" elapsed="0.063038"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:46.983398" elapsed="0.063695"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:37.566190" elapsed="9.481388"/>
+</test>
+<test id="s1-s1-s1-t5" name="TC005: Marcar tarefa como concluída" line="40">
+<kw name="Dado que eu estou na tela inicial" owner="custom" source_name="Dado ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:47.153067" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:47.051326" elapsed="0.101866"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:47.156383" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:47.231022" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:47.153771" elapsed="0.077378"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:47.051105" elapsed="0.180184"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:47.050807" elapsed="0.180564"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:47.050398" elapsed="0.181076"/>
+</kw>
+<kw name="Quando eu clico na caixa de seleção da tarefa &quot;criar testes com robot&quot;" owner="custom" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="eu clico na caixa de seleção da tarefa &quot;criar testes com robot&quot;" owner="tasksPage" source_name="eu clico na caixa de seleção da tarefa &quot;${titulo}&quot;">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:47.234851" level="INFO">Clicking element 'id = com.nweave.todo:id/checkBox_status3'.</msg>
+<msg time="2025-03-16T18:11:47.503130" level="INFO">criteria is com.nweave.todo:id/checkBox_status3</msg>
+<arg>${CHECKBOX_TASK}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:47.233161" elapsed="0.270096"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:47.232883" elapsed="0.270515"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:47.232443" elapsed="0.271060"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:47.231996" elapsed="0.271850"/>
+</kw>
+<kw name="Então o App deve exibir a lista de tarefas" owner="custom" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o App deve exibir a lista de tarefas" owner="tasksPage">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:48.030592" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:47.510737" elapsed="0.519994"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:48.033204" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:48.117255" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.031010" elapsed="0.086386"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:47.510265" elapsed="0.607291"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:47.509789" elapsed="0.607862"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:47.509233" elapsed="0.608489"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:47.508644" elapsed="0.609416"/>
+</kw>
+<kw name="E deve exibir a tarefa &quot;criar testes com robot&quot; na lista &quot;Completed Tasks&quot;" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="deve exibir a tarefa &quot;criar testes com robot&quot; na lista &quot;Completed Tasks&quot;" owner="tasksPage" source_name="deve exibir a tarefa &quot;${titulo}&quot; na lista &quot;${lista}&quot;">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:48.212671" level="INFO">criteria is com.nweave.todo:id/header_title</msg>
+<arg>${TODAYS_TASKS_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.120821" elapsed="0.091986"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:48.217349" level="INFO">Verifying element 'id = com.nweave.todo:id/header_title' contains exactly text 'Completed Tasks'.</msg>
+<msg time="2025-03-16T18:11:48.298851" level="INFO">criteria is com.nweave.todo:id/header_title</msg>
+<arg>${TODAYS_TASKS_TITLE}</arg>
+<arg>${lista}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.213062" elapsed="0.085916"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:48.446248" level="INFO">criteria is com.nweave.todo:id/textView_task_title2</msg>
+<arg>${TASK_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.299305" elapsed="0.147063"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:48.451151" level="INFO">Verifying element 'id = com.nweave.todo:id/textView_task_title2' contains exactly text 'criar testes com robot'.</msg>
+<msg time="2025-03-16T18:11:48.603861" level="INFO">criteria is com.nweave.todo:id/textView_task_title2</msg>
+<arg>${TASK_TITLE}</arg>
+<arg>${titulo}</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.446659" elapsed="0.157322"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:48.120140" elapsed="0.483990"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.119406" elapsed="0.484816"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:48.118793" elapsed="0.485546"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:47.049753" elapsed="1.555247"/>
+</test>
+<test id="s1-s1-s1-t6" name="TC006: Excluir tarefa" line="46">
+<kw name="Dado que eu estou na tela inicial" owner="custom" source_name="Dado ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="que eu estou na tela inicial" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:48.814180" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.610367" elapsed="0.203942"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:48.818761" level="INFO">Verifying element 'id = com.nweave.todo:id/selected_folder_name' contains exactly text 'All Tasks'.</msg>
+<msg time="2025-03-16T18:11:48.936023" level="INFO">criteria is com.nweave.todo:id/selected_folder_name</msg>
+<arg>${TASKS_PAGE_TITLE}</arg>
+<arg>All Tasks</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.814631" elapsed="0.121514"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:48.609870" elapsed="0.326574"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.609175" elapsed="0.327395"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:48.608454" elapsed="0.328241"/>
+</kw>
+<kw name="Quando eu clico e seguro na tarefa &quot;criar testes com robot&quot;" owner="custom" source_name="Quando ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="eu clico e seguro na tarefa &quot;criar testes com robot&quot;" owner="tasksPage" source_name="eu clico e seguro na tarefa &quot;${titulo}&quot;">
+<kw name="LongPress" owner="custom">
+<kw name="Get Element Rect" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:49.117147" level="INFO">Element 'xpath=//android.widget.TextView[@text="criar testes com robot"]' rect: {'height': 89, 'width': 462, 'x': 133, 'y': 289} </msg>
+<msg time="2025-03-16T18:11:49.117259" level="INFO">xpath criteria: //android.widget.TextView[@text="criar testes com robot"]</msg>
+<msg time="2025-03-16T18:11:49.117488" level="INFO">${location} = {'height': 89, 'width': 462, 'x': 133, 'y': 289}</msg>
+<var>${location}</var>
+<arg>${Locator}</arg>
+<doc>Gets dimensions and coordinates of an element</doc>
+<status status="PASS" start="2025-03-16T18:11:48.940541" elapsed="0.177032"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-03-16T18:11:49.118273" level="INFO">${height} = 89</msg>
+<var>${height}</var>
+<arg>${location}</arg>
+<arg>height</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-03-16T18:11:49.117869" elapsed="0.000460"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-03-16T18:11:49.118948" level="INFO">${width} = 462</msg>
+<var>${width}</var>
+<arg>${location}</arg>
+<arg>width</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-03-16T18:11:49.118633" elapsed="0.000389"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-03-16T18:11:49.119531" level="INFO">${x} = 133</msg>
+<var>${x}</var>
+<arg>${location}</arg>
+<arg>x</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-03-16T18:11:49.119243" elapsed="0.000363"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-03-16T18:11:49.120062" level="INFO">${y} = 289</msg>
+<var>${y}</var>
+<arg>${location}</arg>
+<arg>y</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-03-16T18:11:49.119841" elapsed="0.000255"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-16T18:11:49.120491" level="INFO">@{firstFinger} = [ 89 | 462 ]</msg>
+<var>@{firstFinger}</var>
+<arg>${height}</arg>
+<arg>${width}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-16T18:11:49.120279" elapsed="0.000242"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-16T18:11:49.121009" level="INFO">@{secondFinger} = [ 133 | 289 ]</msg>
+<var>@{secondFinger}</var>
+<arg>${x}</arg>
+<arg>${y}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-16T18:11:49.120692" elapsed="0.000364"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-16T18:11:49.121683" level="INFO">@{fingerPositions} = [ [133, 289] | [89, 462] ]</msg>
+<var>@{fingerPositions}</var>
+<arg>${secondFinger}</arg>
+<arg>${firstFinger}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-16T18:11:49.121274" elapsed="0.000464"/>
+</kw>
+<kw name="Tap With Positions" owner="AppiumLibrary">
+<arg>${duration}</arg>
+<arg>@{fingerPositions}</arg>
+<doc>Taps on a particular place with up to five fingers, holding for a
+certain time</doc>
+<status status="PASS" start="2025-03-16T18:11:49.122137" elapsed="3.355289"/>
+</kw>
+<arg>xpath=//android.widget.TextView[@text="${titulo}"]</arg>
+<status status="PASS" start="2025-03-16T18:11:48.939882" elapsed="3.537708"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:48.939153" elapsed="3.538658"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:48.937790" elapsed="3.540098"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:48.937190" elapsed="3.540798"/>
+</kw>
+<kw name="E aparecer um pop-up de contexto" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="aparecer um pop-up de contexto" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:52.618266" level="INFO">criteria is com.nweave.todo:id/dialog_content_scroll_layout</msg>
+<arg>${CONTEXT_POP-UP}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:52.480906" elapsed="0.137507"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:52.480379" elapsed="0.138191"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:52.479772" elapsed="0.138886"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:52.479072" elapsed="0.139697"/>
+</kw>
+<kw name="E eu clico em Excluir" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="eu clico em Excluir" owner="tasksPage">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:52.646869" level="INFO">Clicking element 'id = com.nweave.todo:id/deleteTaskEditMenuButton'.</msg>
+<msg time="2025-03-16T18:11:52.888931" level="INFO">criteria is com.nweave.todo:id/deleteTaskEditMenuButton</msg>
+<arg>${POP-UP_DELETE_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:52.642738" elapsed="0.246320"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:52.641726" elapsed="0.247482"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:52.641157" elapsed="0.248130"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:52.640618" elapsed="0.248763"/>
+</kw>
+<kw name="E aparecer um pop-up de confirmação" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="aparecer um pop-up de confirmação" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:53.811907" level="INFO">xpath criteria: //android.widget.TextView[@text="Delete Task"]</msg>
+<arg>xpath=//android.widget.TextView[@text="Delete Task"]</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:52.892351" elapsed="0.919704"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:52.891788" elapsed="0.920406"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:52.891171" elapsed="0.921144"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:52.890499" elapsed="0.921944"/>
+</kw>
+<kw name="E eu clico em OK" owner="custom" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="eu clico em OK" owner="tasksPage">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:53.899050" level="INFO">criteria is com.nweave.todo:id/okButton</msg>
+<arg>${CONFIRM_OK_BTN}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-03-16T18:11:53.814438" elapsed="0.084747"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:53.901808" level="INFO">Clicking element 'id = com.nweave.todo:id/okButton'.</msg>
+<msg time="2025-03-16T18:11:54.104772" level="INFO">criteria is com.nweave.todo:id/okButton</msg>
+<arg>${CONFIRM_OK_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-03-16T18:11:53.899434" elapsed="0.205469"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:53.814123" elapsed="0.290927"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:53.813642" elapsed="0.291513"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:53.813027" elapsed="0.292236"/>
+</kw>
+<kw name="Então o App deve exibir a lista de tarefas vazia" owner="custom" source_name="Então ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="o App deve exibir a lista de tarefas vazia" owner="tasksPage">
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-03-16T18:11:55.021106" level="INFO">Current page contains element 'id = com.nweave.todo:id/task_list_empty'.</msg>
+<msg time="2025-03-16T18:11:55.021185" level="INFO">criteria is com.nweave.todo:id/task_list_empty</msg>
+<arg>${TASK_LIST_EMPTY}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-03-16T18:11:54.108618" elapsed="0.912620"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:54.108124" elapsed="0.913228"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-03-16T18:11:54.107535" elapsed="0.913867"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:54.106880" elapsed="0.914609"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:11:48.607429" elapsed="6.414421"/>
+</test>
+<kw name="Close All Applications" owner="AppiumLibrary" type="TEARDOWN">
+<doc>Closes all open applications.</doc>
+<status status="PASS" start="2025-03-16T18:11:55.023970" elapsed="1.602140"/>
+</kw>
+<status status="PASS" start="2025-03-16T18:10:47.101240" elapsed="69.525006"/>
+</suite>
+<status status="PASS" start="2025-03-16T18:10:47.083619" elapsed="69.546491"/>
+</suite>
+<status status="PASS" start="2025-03-16T18:10:46.905948" elapsed="69.726385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Mobile Todo" id="s1" pass="6" fail="0" skip="0">Mobile Todo</stat>
+<stat name="Tests" id="s1-s1" pass="6" fail="0" skip="0">Mobile Todo.Tests</stat>
+<stat name="Tests" id="s1-s1-s1" pass="6" fail="0" skip="0">Mobile Todo.Tests.Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
