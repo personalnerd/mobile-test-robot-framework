@@ -2,7 +2,7 @@
 
 Código fonte do projeto de teste de aplicativo Android com Robot Framework, utilizando o padrão Gherkin para escrita dos casos de testes.
 
-Para tradução do padrão Gherkin (GIVEN, WHEN, THEN, AND) para o português brasileiro (DADO, QUANDO, ENTÃO, E), utilizei as dicas da May Fernandes no artigo [Escrevendo os testes com BDD no Robot Framework [gherkin style](https://medium.com/@mayfernandes/season-tutoriais-ep-04-escrevendo-os-testes-com-bdd-no-robot-framework-gherkin-style-72ad50880768)
+Para tradução do padrão Gherkin (GIVEN, WHEN, THEN, AND) para o português brasileiro (DADO, QUANDO, ENTÃO, E), utilizei as dicas da May Fernandes no artigo [Escrevendo os testes com BDD no Robot Framework - gherkin style](https://medium.com/@mayfernandes/season-tutoriais-ep-04-escrevendo-os-testes-com-bdd-no-robot-framework-gherkin-style-72ad50880768)
 
 Baixei um aplicativo simples de "To Do" para estudo e treino de cenários básicos de teste.
 
